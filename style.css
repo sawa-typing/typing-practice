@@ -13,11 +13,18 @@ html, body {
   gap: 10px;
   padding: 12px;
   box-sizing: border-box;
+  overflow: visible; /* ← 念のため */
 }
 
 h1 {
   margin: 0;
   font-size: 20px;
+}
+
+/* プルダウンが確実に前面に来るようにする（重要） */
+label, #textSelect {
+  position: relative;
+  z-index: 1000;
 }
 
 /* 例文表示エリア：ここだけスクロール */
@@ -29,9 +36,13 @@ h1 {
   line-height: 1.8;
   background: #fff;
   min-height: 120px;
+
+  font-size: 18px;          /* 例文の文字サイズ（好みで） */
+  white-space: pre-wrap;    /* ★改行を反映する */
+  word-break: break-word;
 }
 
-/* 入力欄：画面内に残る */
+/* 入力欄 */
 #input {
   width: 100%;
   height: 140px;
@@ -60,7 +71,4 @@ h1 {
   animation: flashRed 0.5s ease-in-out;
   border-radius: 4px;
   padding: 0 2px;
-}
-#targetBox {
-  font-size: 18px;     /* ← 好きな大きさに（16→18→20など） */
 }
