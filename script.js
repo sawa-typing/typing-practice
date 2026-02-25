@@ -182,3 +182,9 @@ input.addEventListener("input", (e) => {
 initSelect();
 render();
 
+function initSelect() {
+  // ...（選択肢を作る処理）
+  // ...（startIndex を決めて setTextByIndex(startIndex) する処理）
+
+  requestAnimationFrame(() => render()); // ←これを最後に追加
+}
