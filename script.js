@@ -308,7 +308,7 @@ function resetCurrent() {
 
 function setTextByIndex(idx) {
   currentTextIndex = idx;
-targetText = TEXTS[currentTextIndex].text.trim();
+targetText = TEXTS[currentTextIndex].text.replace(/^\s+/, "");
   localStorage.setItem("selected_text_id", TEXTS[currentTextIndex].id);
   resetCurrent();
 }
@@ -368,6 +368,7 @@ try {
 } catch (e) {
   showError("スクリプトが停止しました。\n\n" + (e?.message || String(e)));
 }
+
 
 
 
