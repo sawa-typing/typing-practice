@@ -61,3 +61,6 @@ h1 {
   border-radius: 4px;
   padding: 0 2px;
 }
+#targetBox {
+  font-size: 18px;     /* ← 好きな大きさに（16→18→20など） */
+}
