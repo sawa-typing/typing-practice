@@ -1,29 +1,52 @@
-body {
-  font-family: sans-serif;
-  margin: 30px;
+/* ===== reset ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-#target {
-  font-size: 18px;
-  line-height: 1.6;
-  margin: 20px 0;
-  white-space: pre-wrap;
+/* ===== layout ===== */
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  box-sizing: border-box;
 }
 
-.correct {
-  color: black;
+h1 {
+  margin: 0;
+  font-size: 20px;
 }
 
-.incorrect {
-  color: red;
-  background-color: #ffe6e6;
+/* 例文表示エリア：ここだけスクロール */
+#targetBox {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 12px;
+  line-height: 1.8;
+  background: #fff;
+  min-height: 120px;
 }
 
+/* 入力欄：画面内に残る */
 #input {
   width: 100%;
-  height: 100px;
+  height: 140px;
+  box-sizing: border-box;
   font-size: 16px;
 }
+
+/* メッセージ */
+#message {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ===== error flash ===== */
 @keyframes flashRed {
   0%   { background: transparent; color: inherit; }
   20%  { background: #ffcccc; color: #b00000; }
@@ -38,56 +61,3 @@ body {
   border-radius: 4px;
   padding: 0 2px;
 }
-/* 例文表示エリアだけスクロールさせる */
-#targetBox {
- #targetBox {
-  #targetBox {
-  height: 50vh;          /* 画面の半分を例文エリアにする */
-  overflow-y: auto;      /* 縦スクロール */
-  border: 1px solid #ccc;
-  padding: 12px;
-  margin: 12px 0;
-  line-height: 1.8;
-  background: #fff;
-}
-
-/* 入力エリアを画面下に固定 */
-#input {
-  width: 100%;
-  height: 140px;
-  box-sizing: border-box;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-/* 入力欄が重なって例文の最後が隠れないよう、下に余白を作る */
-body {
-  padding-bottom: 170px; /* inputの高さ + 余裕 */
-}
-
-<body>
-  <div class="app">
-
-    <h1>タイピング練習</h1>
-
-    <label>
-      例文：
-      <select id="textSelect"></select>
-    </label>
-
-    <!-- 例文（ここだけスクロールさせる） -->
-    <div id="targetBox">
-      <div id="target"></div>
-    </div>
-
-    <!-- 入力欄（常に画面内に見える） -->
-    <textarea id="input" autofocus></textarea>
-
-    <p id="message"></p>
-
-    <audio id="errorSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
-
-    <script src="./script.js"></script>
-
-  </div>
-</body>
