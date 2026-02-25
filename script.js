@@ -335,7 +335,7 @@ function initSelect() {
   const startIndex = savedIndex >= 0 ? savedIndex : 0;
 
   textSelect.value = String(startIndex);
-  setTextByIndex(targetText = TEXTS[currentTextIndex].text.trim(););
+  setTextByIndex(targetText = TEXTS[currentTextIndex].text;);
 
   textSelect.addEventListener("change", () => {
     const idx = Number(textSelect.value);
@@ -369,6 +369,7 @@ try {
 } catch (e) {
   showError("スクリプトが停止しました。\n\n" + (e?.message || String(e)));
 }
+
 
 
 
