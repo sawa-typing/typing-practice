@@ -80,3 +80,14 @@ label, #textSelect {
   position: relative;
   z-index: 1;
 }
+/* プルダウンを少し大きくする */
+#textSelect {
+  font-size: 16px;   /* 好みで 18px でもOK */
+  padding: 6px 10px;
+  height: 38px;      /* 枠の高さ */
+}
+/* 例文の中身の余白を消す */
+#target {
+  margin: 0;
+  padding: 0;
+}
