@@ -6,22 +6,32 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<body>
+  <div class="app">
 
-<h1>タイピング練習</h1>
-<label>
-  例文：
-  <select id="textSelect"></select>
-</label>
+    <h1>タイピング練習</h1>
 
-<div id="target"></div>
+    <label>
+      例文：
+      <select id="textSelect"></select>
+    </label>
 
-<textarea id="input" autofocus></textarea>
+    <!-- 例文（ここだけスクロールさせる） -->
+    <div id="targetBox">
+      <div id="target"></div>
+    </div>
 
-<p id="message"></p>
+    <!-- 入力欄（常に画面内に見える） -->
+    <textarea id="input" autofocus></textarea>
 
-<audio id="errorSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+    <p id="message"></p>
 
-<script src="./script.js"></script>
+    <audio id="errorSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+
+    <script src="./script.js"></script>
+
+  </div>
 </body>
 </html>
+
 
