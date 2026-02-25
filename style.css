@@ -38,3 +38,28 @@ body {
   border-radius: 4px;
   padding: 0 2px;
 }
+/* 例文表示エリアだけスクロールさせる */
+#targetBox {
+  max-height: 45vh;      /* 画面の高さの45%まで */
+  overflow-y: auto;      /* 縦スクロール */
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin: 12px 0;
+  line-height: 1.8;
+  background: #fff;
+}
+
+/* 入力欄は常に見えるように */
+#input {
+  width: 100%;
+  height: 140px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* スマホ/小さい画面なら例文エリアを少し小さめに */
+@media (max-width: 600px) {
+  #targetBox { max-height: 35vh; }
+  #input { height: 120px; }
+}
+
