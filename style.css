@@ -65,3 +65,29 @@ body {
   padding-bottom: 170px; /* inputの高さ + 余裕 */
 }
 
+<body>
+  <div class="app">
+
+    <h1>タイピング練習</h1>
+
+    <label>
+      例文：
+      <select id="textSelect"></select>
+    </label>
+
+    <!-- 例文（ここだけスクロールさせる） -->
+    <div id="targetBox">
+      <div id="target"></div>
+    </div>
+
+    <!-- 入力欄（常に画面内に見える） -->
+    <textarea id="input" autofocus></textarea>
+
+    <p id="message"></p>
+
+    <audio id="errorSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+
+    <script src="./script.js"></script>
+
+  </div>
+</body>
