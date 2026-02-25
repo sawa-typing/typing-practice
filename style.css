@@ -49,3 +49,21 @@ body {
   line-height: 1.8;
   background: #fff;
 }
+
+/* 入力エリアを画面下に固定 */
+#input {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 140px;
+  box-sizing: border-box;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  background: #fff;
+  z-index: 10; /* プルダウンなどの上に出る */
+}
+
+/* 入力欄が重なって例文の最後が隠れないよう、下に余白を作る */
+body {
+  padding-bottom: 170px; /* inputの高さ + 余裕 */
+}
