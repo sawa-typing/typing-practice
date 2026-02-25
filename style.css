@@ -72,3 +72,11 @@ label, #textSelect {
   border-radius: 4px;
   padding: 0 2px;
 }
+#textSelect {
+  position: relative;
+  z-index: 9999;
+}
+#targetBox {
+  position: relative;
+  z-index: 1;
+}
